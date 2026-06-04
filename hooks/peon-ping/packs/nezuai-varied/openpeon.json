@@ -1,0 +1,135 @@
+{
+  "cesp_version": "1.0",
+  "name": "nezuai-varied",
+  "display_name": "UI Sound Design",
+  "version": "1.0.0",
+  "description": "Designed UI sound effects \u2014 whooshes, beeps, sweeps, and thuds for coding events",
+  "author": {
+    "name": "Mark Chitty",
+    "github": "TechPdM"
+  },
+  "license": "MIT",
+  "language": "en",
+  "tags": [
+    "ui",
+    "designed",
+    "whoosh",
+    "synth",
+    "futuristic"
+  ],
+  "categories": {
+    "session.start": {
+      "sounds": [
+        {
+          "file": "sounds/ui-sound-9.wav",
+          "label": "Swelling whoosh",
+          "sha256": "4fafa30d1a6414d402cf4fac88a177a734834764791a9a159139def0daaa6c0b"
+        },
+        {
+          "file": "sounds/ui-sound-4.wav",
+          "label": "Intense whoosh",
+          "sha256": "21e1f1d0ddaeb926b57dbfe18a991a347383f541e1021a49aecc473bcb4e9f02"
+        }
+      ]
+    },
+    "task.acknowledge": {
+      "sounds": [
+        {
+          "file": "sounds/ui-sound-1.wav",
+          "label": "Short buzz",
+          "sha256": "f1d4e31ebb369919ab6141779166cb793610e3a007c89e0e5a41bc8c9df29459"
+        },
+        {
+          "file": "sounds/ui-sound-3.wav",
+          "label": "Decaying beep",
+          "sha256": "1528c700729ea6897fa5bd0cf27f4b14ad9b75f7c7f5f489cb46ac618f01b42f"
+        }
+      ]
+    },
+    "task.complete": {
+      "sounds": [
+        {
+          "file": "sounds/ui-sound-5.wav",
+          "label": "Positive whoosh",
+          "sha256": "ec6a88e08ebdea635be19a40ba731e6948bd4f74a6d371595ec8fbe60e8f8525"
+        },
+        {
+          "file": "sounds/ui-sound-12.wav",
+          "label": "Neutral beep",
+          "sha256": "696b6949fc9ec617c6462463cb2b07b3c4cdf2199ba3ff8d044ce72986f37bc0"
+        }
+      ]
+    },
+    "task.error": {
+      "sounds": [
+        {
+          "file": "sounds/ui-sound-2.wav",
+          "label": "Low thud",
+          "sha256": "85d589756cd90da8e6265000266207dd34a134d58c7b88545633c129a4093ada"
+        },
+        {
+          "file": "sounds/ui-sound-11.wav",
+          "label": "Negative beep",
+          "sha256": "1f57b50d64decefd13b329dc0593b972333bb4eab20c9c7e9e405529c1b7c75d"
+        },
+        {
+          "file": "sounds/ui-sound-10.wav",
+          "label": "High negative whoosh",
+          "sha256": "2193d14cb2f1964e1f1f861bf21c19a698cea43a20f23e0ae1770ed9915e769a"
+        }
+      ]
+    },
+    "input.required": {
+      "sounds": [
+        {
+          "file": "sounds/ui-sound-6.wav",
+          "label": "High whoosh",
+          "sha256": "ffe3e1b2cba93aa29654d6749277dc690e967ff0e751ccb8ed65a57cb991d12e"
+        },
+        {
+          "file": "sounds/ui-sound-14.wav",
+          "label": "Long high beep",
+          "sha256": "ca9ce6b60156553f17a6a4491b4b6e85de5f4a8ab71ef31ac54815d3af0d056a"
+        }
+      ]
+    },
+    "resource.limit": {
+      "sounds": [
+        {
+          "file": "sounds/ui-sound-16.wav",
+          "label": "Warning sweep",
+          "sha256": "28dab6b0404515fcc890bcf799383aec2c524e7836b1887b1ea75919f05fb69e"
+        },
+        {
+          "file": "sounds/ui-sound-17.wav",
+          "label": "Low warning tone",
+          "sha256": "198a95107cd128d16c992cbf55ba427ec85f8c9042db6ae8ef03aee3267f0399"
+        }
+      ]
+    },
+    "user.spam": {
+      "sounds": [
+        {
+          "file": "sounds/ui-sound-7.wav",
+          "label": "Low buzz",
+          "sha256": "ca0873133164d246d47d45880f29df34c58a870a185192284ac768b61bf7b239"
+        },
+        {
+          "file": "sounds/ui-sound-8.wav",
+          "label": "Dismissive whoosh",
+          "sha256": "42febd9f30b3e42fd9410383080beaf9aaf1df0396d2fc9b08f521ca183b1c7e"
+        },
+        {
+          "file": "sounds/ui-sound-13.wav",
+          "label": "Negative whoosh",
+          "sha256": "0136d090c664231c48b0b34cf592724b56be340b7035a9308b779d7e4509c069"
+        },
+        {
+          "file": "sounds/ui-sound-15.wav",
+          "label": "Long low beep",
+          "sha256": "3231bf68b683e8f49683191e515fddee6850e5722148de944e782266f2e69a92"
+        }
+      ]
+    }
+  }
+}

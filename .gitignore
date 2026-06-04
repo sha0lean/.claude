@@ -1,0 +1,44 @@
+# Credentials — NE JAMAIS COMMITER
+.credentials.json
+*.pem
+*.key
+
+# Historique & sessions
+history.jsonl
+sessions/
+projects/
+
+# Caches
+cache/
+paste-cache/
+shell-snapshots/
+backups/
+file-history/
+
+# Plugins — téléchargeables à la volée
+plugins/cache/
+plugins/data/
+plugins/marketplaces/
+
+# État local peon-ping
+hooks/peon-ping/.state.json
+hooks/peon-ping/*.log
+
+# Fichiers runtime Claude Code
+workspace/
+chrome/
+ide/
+session-env/
+.last-cleanup
+.last-update-result.json
+mcp-needs-auth-cache.json
+*.backup.*
+.claude.json.backup.*
+
+# Utilitaires locaux
+sort-vscode-settings.js
+
+# Fichiers de session de travail
+todo/
+zarchives/
+plans/

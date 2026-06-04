@@ -1,0 +1,250 @@
+{
+  "agentPushNotifEnabled": true,
+  "autoUpdatesChannel": "latest",
+  "editorMode": "normal",
+  "effortLevel": "high",
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "warp@claude-code-warp": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-code-warp": {
+      "source": {
+        "source": "github",
+        "repo": "warpdotdev/claude-code-warp"
+      }
+    }
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$raw = [Console]::In.ReadToEnd(); $j = $raw | ConvertFrom-Json; if ($j.tool_input.file_path -ieq 'C:\\Users\\shao\\AppData\\Roaming\\Code\\User\\settings.json') { node 'C:\\Users\\shao\\_settings-validator\\validate.mjs' }",
+            "shell": "powershell",
+            "statusMessage": "Validation settings.json..."
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\scripts\\session-start-random.ps1\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\scripts\\hook-handle-use.ps1\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  },
+  "inputNeededNotifEnabled": true,
+  "language": "French",
+  "permissions": {
+    "allow": [
+      "PowerShell($env:PATH += \";C:\\\\Users\\\\shao\\\\scoop\\\\apps\\\\php\\\\current\"; cd \"C:\\\\Users\\\\shao\\\\workspace\\\\auberge_arthaz\"; php bin/grav clearcache)",
+      "PowerShell($response = Invoke-WebRequest -Uri \"http://localhost:8080/evenements\" -UseBasicParsing -SkipHttpErrorCheck; \"Bistrot \\(vedette\\): \" + \\($response.Content -match \"Soirée Bistrot\" ? \"✓\" : \"✗\"\\); \"Jazz \\(à venir\\): \" + \\($response.Content -match \"Jazz\" ? \"✓\" : \"✗\"\\); \"Mets & vins \\(archives\\): \" + \\($response.Content -match \"mets\" ? \"✓\" : \"✗\"\\))",
+      "PowerShell($env:PATH += \";C:\\\\Users\\\\shao\\\\scoop\\\\apps\\\\php\\\\current\"; cd \"C:\\\\Users\\\\shao\\\\workspace\\\\auberge_arthaz\"; php bin/grav clearcache; $response = Invoke-WebRequest -Uri \"http://localhost:8080/evenements\" -UseBasicParsing -SkipHttpErrorCheck; \"Bistrot: \" + \\($response.Content -match \"Soirée Bistrot\" ? \"✓\" : \"✗\"\\); \"Jazz: \" + \\($response.Content -match \"Jazz\" ? \"✓\" : \"✗\"\\); \"Mets: \" + \\($response.Content -match \"mets\" ? \"✓\" : \"✗\"\\))",
+      "Bash(Start-Sleep -Seconds 2)",
+      "Bash(curl -s \"http://localhost:8080/evenements\")",
+      "Bash(Select-String -Pattern \"<h1|Soirée|Archives\")",
+      "Bash(Select-Object -First 5)",
+      "PowerShell(\\(curl -s \"http://localhost:8080/\"\\).Length)",
+      "PowerShell(curl -i \"http://localhost:8080/evenements\" 2>&1)",
+      "PowerShell(curl -s -w \"%{http_code}\" -o $null \"http://localhost:8080/evenements\")",
+      "PowerShell(\\(curl -i \"http://localhost:8080/evenements\" 2>&1\\)[0])",
+      "PowerShell(Get-Process -Name \"php\")",
+      "PowerShell($html = curl -s \"http://localhost:8080/evenements\"; if \\($html.Length -gt 100\\) { \"Page chargée : $\\($html.Length\\) caractères\" } else { \"Page vide ou erreur\" })",
+      "PowerShell(Get-Process php | Stop-Process -Force; Start-Sleep -Seconds 1; & \"C:\\\\Users\\\\shao\\\\scoop\\\\apps\\\\php\\\\current\\\\php.exe\" -S localhost:8080 system/router.php -d \"c:\\\\Users\\\\shao\\\\workspace\\\\auberge_arthaz\" 2>&1 | Out-Null &; Start-Sleep -Seconds 2; curl -s \"http://localhost:8080/evenements\" | Select-String \"affiches\")",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(Select-String -Path \"c:\\\\Users\\\\shao\\\\workspace\\\\auberge_arthaz\\\\user\\\\plugins\\\\admin\\\\admin.php\" -Pattern \"version\")",
+      "Bash(curl -sI \"https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js\")",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\shao\\\\workspace\\\\auberge_arthaz\\\\user\\\\themes\\\\auberge-arthaz\\\\templates\\\\partials\\\\\")",
+      "Bash(git checkout *)",
+      "Bash(git push *)",
+      "PowerShell(if \\(Test-Path \"$env:USERPROFILE\\\\.ssh\\\\id_ed25519.pub\"\\) { Write-Output \"ed25519 existe deja\"; Get-Content \"$env:USERPROFILE\\\\.ssh\\\\id_ed25519.pub\" } elseif \\(Test-Path \"$env:USERPROFILE\\\\.ssh\\\\id_rsa.pub\"\\) { Write-Output \"rsa existe deja\"; Get-Content \"$env:USERPROFILE\\\\.ssh\\\\id_rsa.pub\" } else { Write-Output \"aucune cle SSH\" })",
+      "PowerShell(if \\(-not \\(Test-Path \"$env:USERPROFILE\\\\.ssh\"\\)\\) { New-Item -ItemType Directory -Path \"$env:USERPROFILE\\\\.ssh\" | Out-Null }; ssh-keygen -t ed25519 -C \"shao-pc-arthaz\" -f \"$env:USERPROFILE\\\\.ssh\\\\id_ed25519\" -N '\"\"')",
+      "Read(//c/Users/shao/.ssh/**)",
+      "Bash(git restore *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "PowerShell($keyContent = Get-Content \"$env:USERPROFILE\\\\.ssh\\\\id_ed25519\" -Raw; if \\($keyContent -match \"ENCRYPTED\"\\) { Write-Output \"Cle protegee par passphrase\" } else { Write-Output \"Cle non protegee \\(pas de passphrase\\)\" })",
+      "PowerShell(ssh-keygen -y -P \"\" -f \"$env:USERPROFILE\\\\.ssh\\\\id_ed25519\" 2>&1)",
+      "PowerShell(ssh-keygen -p -P '\"\"' -N \"\" -f \"$env:USERPROFILE\\\\.ssh\\\\id_ed25519\")",
+      "PowerShell(ssh-keygen -y -P \"\" -f \"$env:USERPROFILE\\\\.ssh\\\\id_ed25519\")",
+      "Bash(git check-ignore *)",
+      "Bash(git fetch *)",
+      "Bash(ssh arthaz *)",
+      "WebFetch(domain:www.flaticon.com)",
+      "PowerShell(cd 'C:\\\\Users\\\\shao\\\\workspace\\\\auberge_arthaz'; $env:PATH = 'C:\\\\Users\\\\shao\\\\scoop\\\\apps\\\\php\\\\current' + [IO.Path]::PathSeparator + $env:PATH; php -S localhost:8080 system/router.php)",
+      "Bash(curl -s http://localhost:8080)",
+      "Bash(curl -s http://localhost:8080/admin)",
+      "Bash(curl -s -I http://localhost:8080/admin)",
+      "Bash(Remove-Item -Path \"cache\" -Recurse -Force -ErrorAction SilentlyContinue)",
+      "Bash(Write-Host \"Cache vidé\")",
+      "PowerShell($env:PATH = \"C:\\\\Users\\\\shao\\\\scoop\\\\apps\\\\php\\\\current;\" + $env:PATH; Set-Location \"C:\\\\Users\\\\shao\\\\workspace\\\\auberge_arthaz\"; php -S localhost:8080 system/router.php)",
+      "Bash(rm -rf cache tmp logs)",
+      "Bash(mkdir -p cache tmp logs)",
+      "Bash(git apply *)",
+      "Bash(gh run *)",
+      "PowerShell(\\(Invoke-WebRequest -Uri \"http://localhost:8080/\" -UseBasicParsing\\).Content | Select-String -Pattern 'week-menu|Menu du jour|Notre menu complet' | Select-Object -First 10)",
+      "PowerShell(\\(Invoke-WebRequest -Uri \"http://localhost:8080/carte\" -UseBasicParsing\\).Content | Select-String -Pattern 'Menu de l|Renouvelée|full-menu' | Select-Object -First 10)",
+      "PowerShell(Get-Process php -ErrorAction SilentlyContinue)",
+      "Bash(php -S localhost:8080 system/router.php > /tmp/php-server.log 2>&1 &)",
+      "PowerShell($response = Invoke-WebRequest -Uri \"http://localhost:8080/carte\" -UseBasicParsing; if \\($response.Content -match 'semaine du'\\) { Write-Output \"✓ Données menu_auberge trouvées\" } else { Write-Output \"✗ Données menu_auberge vides\"; $response.Content | Select-String -Pattern 'week-head|sub' -Context 0, 2 })",
+      "PowerShell(Start-Sleep -Seconds 1; $response = Invoke-WebRequest -Uri \"http://localhost:8080/carte\" -UseBasicParsing; if \\($response.Content -match 'semaine du'\\) { Write-Output \"✓ OK: Données affichées\"; $response.Content | Select-String -Pattern 'semaine du' } else { Write-Output \"✗ FAIL: Données toujours vides\" })",
+      "Bash(Write-Output \"---\")",
+      "PowerShell(Start-Sleep -Seconds 1; $r = Invoke-WebRequest -Uri \"http://localhost:8080/carte\" -UseBasicParsing; if \\($r.Content -match 'semaine du 4'\\) { \"✓ Succès: menu_auberge s'affiche\"; $r.Content | Select-String -Pattern 'semaine du 4|Poke bowl|Pêche du jour|Les desserts' } else { \"✗ Échoué\" })",
+      "Bash(curl -s \"http://localhost:8080/\")",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:8080/\" -UseBasicParsing; $r.Content | Select-String -Pattern 'Dernière mise à jour' -Context 0, 1)",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:8080/carte\" -UseBasicParsing; $r.Content | Select-String -Pattern 'page-hero|<h1' -Context 0, 2 | Select-Object -First 10)",
+      "Bash(curl -s \"http://localhost:8080/carte\")",
+      "Bash(curl -s \"http://localhost:8080/admin/pages/carte\")",
+      "Bash(find \"C:\\\\Users\\\\shao\\\\workspace\\\\auberge_arthaz\\\\user\\\\themes\\\\auberge-arthaz\\\\blueprints\\\\pages\\\\\" -name \"*evenement*\" -o -name \"*event*\")",
+      "Bash(curl -s http://localhost:8080/admin/pages/accueil)",
+      "Bash(Get-Content \"C:\\\\Users\\\\shao\\\\workspace\\\\auberge_arthaz\\\\user\\\\themes\\\\auberge-arthaz\\\\css\\\\theme.css\")",
+      "Bash(Measure-Object -Line)",
+      "PowerShell(\\(Get-Content \"C:\\\\Users\\\\shao\\\\workspace\\\\auberge_arthaz\\\\user\\\\themes\\\\auberge-arthaz\\\\css\\\\theme.css\" | Measure-Object -Line\\).Lines)",
+      "Bash(git rm *)",
+      "Bash(Get-Process php *)",
+      "Bash(Select-Object Id, CPU, StartTime)",
+      "Read(//c/Users/shao/scoop/shims/**)",
+      "PowerShell(Start-Process -FilePath \"C:\\\\Users\\\\shao\\\\scoop\\\\shims\\\\php.exe\" -ArgumentList \"-S\", \"localhost:8080\", \"system/router.php\" -WorkingDirectory \"C:\\\\Users\\\\shao\\\\workspace\\\\auberge_arthaz\" -NoNewWindow -PassThru)",
+      "PowerShell(Stop-Process -Name php -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Process -Name php -ErrorAction SilentlyContinue)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\shao\\\\workspace\\\\auberge_arthaz\\\\user\\\\pages\\\\04.galerie\")",
+      "Bash(Out-Null)",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\shao\\\\workspace\\\\auberge_arthaz\\\\user\\\\pages\\\\04.galerie\")",
+      "PowerShell(\"OK\")",
+      "Bash(git init *)",
+      "Bash(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\shao\\\\workspace\\\\webjourney_admin\\\\docs\\\\skills\")",
+      "Bash(Write-Output \"OK\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\shao\\\\workspace\\\\webjourney_admin\\\\docs\\\\skills\")"
+    ],
+    "defaultMode": "bypassPermissions",
+    "additionalDirectories": [
+      "C:\\Users\\shao\\.claude",
+      "\\tmp",
+      "C:\\Users\\shao\\workspace\\auberge_arthaz\\cache"
+    ]
+  },
+  "preferredNotifChannel": "terminal_bell",
+  "remoteControlAtStartup": true,
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "auto",
+  "verbose": true,
+  "worktree": {}
+}

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem *)",
+      "PowerShell(code --list-extensions 2>$null)",
+      "PowerShell(node \"C:\\\\Users\\\\shao\\\\_settings-validator\\\\validate.mjs\")"
+    ]
+  },
+  "outputStyle": "Learning"
+}
