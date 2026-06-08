@@ -4,10 +4,11 @@
     "frontend-design@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\shao\\.claude\\plugins\\cache\\claude-plugins-official\\frontend-design\\unknown",
-        "version": "unknown",
+        "installPath": "C:\\Users\\shao\\.claude\\plugins\\cache\\claude-plugins-official\\frontend-design\\3b92eedcf914",
+        "version": "3b92eedcf914",
         "installedAt": "2026-05-08T20:57:02.473Z",
-        "lastUpdated": "2026-05-08T20:57:02.473Z"
+        "lastUpdated": "2026-06-06T22:09:41.259Z",
+        "gitCommitSha": "3b92eedcf914c10fdd6efaa4141b4879b1389652"
       }
     ],
     "warp@claude-code-warp": [

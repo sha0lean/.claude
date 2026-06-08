@@ -1,37 +1,34 @@
 {
-  "path_rules": [],
-  "pack_rotation_mode": "session_override",
-  "pack_rotation": [
-    "cute-minimal",
-    "nezuai-varied",
-    "peasant_fr"
-  ],
-  "tts": {
-    "backend": "auto",
-    "rate": 1,
-    "volume": 0.5,
-    "voice": "default",
-    "mode": "sound-then-speak",
-    "enabled": false
-  },
-  "categories": {
-    "task.acknowledge": true,
-    "session.start": true,
-    "input.required": true,
-    "task.error": true,
-    "resource.limit": true,
-    "task.complete": true,
-    "user.spam": false
-  },
-  "volume": 1.0,
-  "silent_window_seconds": 0,
-  "notification_title_ide": false,
-  "ide_rules": [],
-  "annoyed_window_seconds": 10,
-  "exclude_dirs": [],
-  "notification_title_marker": "⚔️",
-  "enabled": true,
-  "default_pack": "peasant_fr",
-  "desktop_notifications": true,
-  "annoyed_threshold": 3
+	"path_rules": [],
+	"pack_rotation_mode": "session_override",
+	"pack_rotation": ["cute-minimal", "nezuai-varied", "peasant_fr"],
+	"tts": {
+		"backend": "auto",
+		"rate": 1,
+		"volume": 0.5,
+		"voice": "default",
+		"mode": "sound-then-speak",
+		"enabled": false
+	},
+	"categories": {
+		"task.acknowledge": true,
+		"session.start": true,
+		"input.required": true,
+		"task.error": true,
+		"resource.limit": true,
+		"task.complete": true,
+		"user.spam": false
+	},
+	"volume": 1.0,
+	"session_start_cooldown_seconds": 5,
+	"silent_window_seconds": 0,
+	"notification_title_ide": false,
+	"ide_rules": [],
+	"annoyed_window_seconds": 10,
+	"exclude_dirs": [],
+	"notification_title_marker": "⚔️",
+	"enabled": true,
+	"default_pack": "cute-minimal",
+	"desktop_notifications": true,
+	"annoyed_threshold": 3
 }

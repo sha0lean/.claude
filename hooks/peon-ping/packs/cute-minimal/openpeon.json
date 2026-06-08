@@ -21,18 +21,18 @@
     "session.start": {
       "sounds": [
         {
-          "file": "sounds/hover-sound.wav",
-          "label": "Hover",
-          "sha256": "ce7010f3999816aa0ce3cbd421e6992f801e1863f96e8dced567ca5c59c1b20e"
+          "file": "sounds/pause-sound.wav",
+          "label": "Pause",
+          "sha256": "5ab48a19a17293b3b99117fe12e4b3c2152f3c1671638a6617da24f0f518d17c"
         }
       ]
     },
     "task.complete": {
       "sounds": [
         {
-          "file": "sounds/pause-sound.wav",
-          "label": "Pause",
-          "sha256": "5ab48a19a17293b3b99117fe12e4b3c2152f3c1671638a6617da24f0f518d17c"
+          "file": "sounds/cancel-sound.wav",
+          "label": "Cancel",
+          "sha256": "78719b70a23a56b2e0cedcbed0756a78da68c683782b8e4769250206a2a0d23f"
         }
       ]
     },
@@ -48,9 +48,9 @@
     "input.required": {
       "sounds": [
         {
-          "file": "sounds/cancel-sound.wav",
-          "label": "Cancel",
-          "sha256": "78719b70a23a56b2e0cedcbed0756a78da68c683782b8e4769250206a2a0d23f"
+          "file": "sounds/hover-sound.wav",
+          "label": "Hover",
+          "sha256": "ce7010f3999816aa0ce3cbd421e6992f801e1863f96e8dced567ca5c59c1b20e"
         }
       ]
     },

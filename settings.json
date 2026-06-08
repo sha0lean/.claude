@@ -35,8 +35,13 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\scripts\\session-start-random.ps1\"",
+            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
             "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\scripts\\session-start-random.ps1\"",
+            "timeout": 5
           }
         ]
       }
@@ -47,7 +52,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "command": "powershell -NoProfile -NonInteractive -File \"C:\\Users\\shao\\.claude\\hooks\\peon-ping\\peon.ps1\"",
             "timeout": 10
           }
         ]
@@ -59,7 +64,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "command": "powershell -NoProfile -NonInteractive -File \"C:\\Users\\shao\\.claude\\hooks\\peon-ping\\peon.ps1\"",
             "timeout": 10
           }
         ]
@@ -71,7 +76,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "command": "powershell -NoProfile -NonInteractive -File \"C:\\Users\\shao\\.claude\\hooks\\peon-ping\\peon.ps1\"",
             "timeout": 10
           }
         ]
@@ -83,7 +88,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "command": "powershell -NoProfile -NonInteractive -File \"C:\\Users\\shao\\.claude\\hooks\\peon-ping\\peon.ps1\"",
             "timeout": 10
           }
         ]
@@ -95,7 +100,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "command": "powershell -NoProfile -NonInteractive -File \"C:\\Users\\shao\\.claude\\hooks\\peon-ping\\peon.ps1\"",
             "timeout": 10
           }
         ]
@@ -107,7 +112,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "command": "powershell -NoProfile -NonInteractive -File \"C:\\Users\\shao\\.claude\\hooks\\peon-ping\\peon.ps1\"",
             "timeout": 10
           }
         ]
@@ -119,7 +124,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "command": "powershell -NoProfile -NonInteractive -File \"C:\\Users\\shao\\.claude\\hooks\\peon-ping\\peon.ps1\"",
             "timeout": 10
           }
         ]
@@ -131,7 +136,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\peon.ps1\"",
+            "command": "powershell -NoProfile -NonInteractive -File \"C:\\Users\\shao\\.claude\\hooks\\peon-ping\\peon.ps1\"",
             "timeout": 10
           }
         ]
@@ -143,7 +148,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -NoProfile -NonInteractive -File \"$env:USERPROFILE\\.claude\\hooks\\peon-ping\\scripts\\hook-handle-use.ps1\"",
+            "command": "powershell -NoProfile -NonInteractive -File \"C:\\Users\\shao\\.claude\\hooks\\peon-ping\\scripts\\hook-handle-use.ps1\"",
             "timeout": 5
           }
         ]
