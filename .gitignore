@@ -19,6 +19,7 @@ file-history/
 plugins/cache/
 plugins/data/
 plugins/marketplaces/
+plugins/.last_inuse_sweep
 
 # État local peon-ping
 hooks/peon-ping/.state.json
